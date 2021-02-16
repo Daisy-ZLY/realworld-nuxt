@@ -54,7 +54,8 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd /root/realworld-nuxtjs
-          wget https://github.com/lipengzhou/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
+          wget https://github.com/Daisy-ZLY/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
+          rm -rf node_modules
           npm install --production --registry=http://registry.npm.taobao.org
           pm2 reload pm2.config.json
