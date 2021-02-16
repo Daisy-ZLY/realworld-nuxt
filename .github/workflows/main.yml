@@ -56,6 +56,5 @@ jobs:
           cd /root/realworld-nuxtjs
           wget https://github.com/lipengzhou/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
-          node --version
-          /opt/node/bin/npm install --production
-          /opt/node/bin/pm2 reload pm2.config.json
+          npm install --production --registry=http://registry.npm.taobao.org
+          pm2 reload pm2.config.json
