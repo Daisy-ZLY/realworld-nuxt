@@ -6,10 +6,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+    runs-on: centos
     steps:
 
     # 下载源码
